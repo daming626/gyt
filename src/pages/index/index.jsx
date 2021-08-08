@@ -1,10 +1,14 @@
 import { Component } from 'react'
 import { connect } from 'react-redux'
 import { View, Button, Text } from '@tarojs/components'
-import { AtSearchBar } from 'taro-ui'
+
+import Header from "./header";
+import TabBar from "../commen/tabBar";
+import HomeSwiper from "./homeSwiper";
+import IndexIcon from "./indexIcon"
+import HomeMidCon from './homeMidCon'
 
 import { add, minus, asyncAdd } from '../../actions/counter'
-
 import './index.less'
 
 @connect(({ counter }) => ({
@@ -34,9 +38,11 @@ class Index extends Component {
   render () {
     return (
       <View className='index'>
-        <AtSearchBar
-          placeholder="海哥一打五"
-        />
+        <Header/>
+        <HomeSwiper/>
+        <IndexIcon/>
+        <HomeMidCon/>
+        <TabBar/>
       </View>
     )
   }

@@ -7,6 +7,7 @@ import TabBar from "../commen/tabBar";
 import HomeSwiper from "./homeSwiper";
 import IndexIcon from "./indexIcon"
 import HomeMidCon from './homeMidCon'
+import HomeHotList from './homeHotList'
 
 import { add, minus, asyncAdd } from '../../actions/counter'
 import './index.less'
@@ -42,6 +43,7 @@ class Index extends Component {
         <HomeSwiper/>
         <IndexIcon/>
         <HomeMidCon/>
+        <HomeHotList/>
         <TabBar/>
       </View>
     )

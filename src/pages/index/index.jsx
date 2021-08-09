@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { View, Button, Text } from '@tarojs/components'
 
 import Header from "./header";
-import TabBar from "../commen/tabBar";
+import TabBar from "../common/tabBar";
 import HomeSwiper from "./homeSwiper";
 import IndexIcon from "./indexIcon"
 import HomeMidCon from './homeMidCon'

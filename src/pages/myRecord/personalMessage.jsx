@@ -106,7 +106,7 @@ class personalMessage extends Component {
         </View>
         <View className='at-row options'>
           <View><AtButton>保存</AtButton></View>
-          <View><AtButton>其他分支改动</AtButton></View>
+          <View><AtButton>其他分支改动-2</AtButton></View>
         </View>
         <TabBar />
       </View>

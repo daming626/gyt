@@ -2,7 +2,7 @@
   "miniprogramRoot": "dist/",
   "projectname": "gyt",
   "description": "gyt",
-  "appid": "wx396fa66a9dcdc7ad",
+  "appid": "wx45a8aba501ac64e1",
   "setting": {
     "urlCheck": true,
     "es6": false,
@@ -23,7 +23,7 @@
     "compileHotReLoad": false,
     "useMultiFrameRuntime": true,
     "useApiHook": true,
-    "useApiHostProcess": false,
+    "useApiHostProcess": true,
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],
@@ -40,5 +40,6 @@
     "minifyWXSS": true
   },
   "compileType": "miniprogram",
+  "libVersion": "2.18.1",
   "condition": {}
 }

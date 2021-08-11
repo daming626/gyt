@@ -2,9 +2,9 @@
   "miniprogramRoot": "dist/",
   "projectname": "gyt",
   "description": "gyt",
-  "appid": "wx396fa66a9dcdc7ad",
+  "appid": "wx6b169c2850437ef9",
   "setting": {
-    "urlCheck": true,
+    "urlCheck": false,
     "es6": false,
     "enhance": false,
     "postcss": false,

@@ -4,7 +4,7 @@
   "description": "gyt",
   "appid": "wx45a8aba501ac64e1",
   "setting": {
-    "urlCheck": true,
+    "urlCheck": false,
     "es6": false,
     "enhance": false,
     "postcss": false,

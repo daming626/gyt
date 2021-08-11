@@ -2,6 +2,7 @@ import {Component} from 'react'
 import Taro from '@tarojs/taro'
 import {View} from '@tarojs/components'
 import { AtTabBar }  from 'taro-ui'
+import {BASEURLIMG} from '../../constants/global'
 
 class TabBar extends Component{
   handleClick (value) {
@@ -13,7 +14,7 @@ class TabBar extends Component{
         });
         break;
       case 1:
-        Taro.reLaunch({
+        Taro.navigateTo({
           url: `/pages/hotSpot/hotSpotIndex` //'/pages/physicalIdentity/healthKnowledge'
         });
         break;
@@ -39,6 +40,7 @@ class TabBar extends Component{
   render(){
     return(
       <View>
+        <View style={{'height':'4rem'}} />
         <AtTabBar
           fixed
           backgroundColor='#ffffff'
@@ -46,10 +48,10 @@ class TabBar extends Component{
           selectedColor='#d40000'
 
           tabList={[
-            { title: '首页'},
-            { title: '今日热点'},
-            { title: '健康档案'},
-            { title: '我的' }
+            { title: '首页',image:`${BASEURLIMG}首页.svg`},
+            { title: '今日热点',image:`${BASEURLIMG}信息.svg`},
+            { title: '健康档案',image:`${BASEURLIMG}爱心.svg`},
+            { title: '我的',image:`${BASEURLIMG}我的.svg`}
           ]}
           onClick={this.handleClick}
         />

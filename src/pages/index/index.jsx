@@ -3,22 +3,19 @@ import { connect } from 'react-redux'
 import { View, Button, Text } from '@tarojs/components'
 import { AtSearchBar } from 'taro-ui'
 import Taro from '@tarojs/taro' 
-import { add, minus, asyncAdd } from '../../actions/counter'
+import { GYT, YYREGISTRATION } from '../../constants/global'
+import {search} from "../../actions/search";
 
 import './index.less'
 
-@connect(({ counter }) => ({
-  counter
+@connect(() => ({
 }), (dispatch) => ({
-  add () {
-    dispatch(add())
-  },
-  dec () {
-    dispatch(minus())
-  },
-  asyncAdd () {
-    dispatch(asyncAdd())
-  }
+    search (keyword, condition, pageNum, pageSize) {
+        dispatch(search(keyword, condition, pageNum, pageSize))
+    },
+    getHospitals(page,condition) {
+        dispatch(getHospitals(page,condition))
+    }
 }))
 class Index extends Component {
   componentWillReceiveProps (nextProps) {
@@ -31,20 +28,23 @@ class Index extends Component {
 
   componentDidHide () { }
 
-  handleClicks(){
-    console.log("KKKKKKKK")
-    Taro.navigateTo({
-      url:'../yyRegistration/yyhospital/index?kk=KKKKKPPPPPPPPPPPP'
-    })
-  }
-
-  handleClick1(){
-    console.log("11111")
-    Taro.navigateTo({
-      url:'../hospital/hospitalGyt?kk=KKKKKPPPPPPPPPPPP'
-    })
-  }
-
+  toIndexIconPage(target) {
+    switch (target) {
+        case GYT:
+            setTimeout(function () {
+                Taro.navigateTo({url: '/pages/hospital/hospitalGyt'});
+            }, 100);
+            break
+        case YYREGISTRATION:
+            this.props.search('', '', 1, 20)
+            setTimeout(function () {
+                Taro.navigateTo({url: '/pages/yyRegistration/yyhospital/index'});
+            }, 100);
+            break;
+        default:
+            break;
+    }
+}
 
   render () {
     return (
@@ -52,10 +52,10 @@ class Index extends Component {
         <AtSearchBar
           placeholder="海哥一打五"
         />
-        <View onClick={this.handleClicks}>
+        <View onClick={this.toIndexIconPage.bind(this, YYREGISTRATION)}>
         <Button>预约挂号</Button>
         </View>
-        <View onClick={this.handleClick1}>
+        <View onClick={this.toIndexIconPage.bind(this, GYT)}>
         <Button>国医堂</Button>
         </View>
       </View>

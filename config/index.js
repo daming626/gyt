@@ -9,6 +9,7 @@ const config = {
   },
   sourceRoot: 'src',
   outputRoot: 'dist',
+  // outputRoot: 'dist/${process.env.TARO_ENV}',
   plugins: [],
   defineConstants: {
   },

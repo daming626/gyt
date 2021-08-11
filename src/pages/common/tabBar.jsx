@@ -25,6 +25,10 @@ class TabBar extends Component {
   handleClick (value) {
     console.log("tabBar ====" +value);
     switch (value) {
+      case 1:
+        Taro.reLaunch({
+          url: '/pages/hotSpot/hotSpotIndex'
+        })
       case 3:
         Taro.reLaunch({
           url: '/pages/myRecord/index'

@@ -23,6 +23,13 @@ export default {
         // 'evaluation',
         // 'physical'
       ]
+    },
+    {
+      "root": "pages/hotSpot/",
+      "pages": [
+        "hotSpotIndex",
+        "hotSpotMedicineDetail",
+      ]
     }
   ]
 }

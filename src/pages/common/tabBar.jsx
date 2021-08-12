@@ -19,6 +19,7 @@ class TabBar extends Component{
   }
   handleClick (value) {
     console.log("tabBar ====" +value);
+    console.log("当前位置"+this.props.tabBarCurrent)
     if(value!=this.props.tabBarCurrent){
     switch (value) {
       case 0:
@@ -27,7 +28,7 @@ class TabBar extends Component{
         });
         break;
       case 1:
-        Taro.navigateTo({
+        Taro.reLaunch({
           url: `/pages/hotSpot/hotSpotIndex` //'/pages/physicalIdentity/healthKnowledge'
         });
         break;

@@ -5,9 +5,10 @@ const INITIAL_STATE = {
 }
 
 export default function gytHospitalList (state = INITIAL_STATE, action) {
-  console.log(GETHOSPITALS)
+  console.log("YYYYYYY"+GETHOSPITALS)
   switch (action.type) {
     case GETHOSPITALS:
+      console.log("YES")
       return {
         ...state,
         gytHospitals: action.gytHospitals,

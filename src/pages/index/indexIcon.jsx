@@ -2,6 +2,10 @@ import { Component } from 'react'
 import { View, Text, Image } from '@tarojs/components'
 import { GYT, YYREGISTRATION, SMART, BASEURLIMG } from '../../constants/global'
 import Taro from '@tarojs/taro'
+import {connect} from "react-redux";
+// import {search} from "../../actions/search";
+// import {getHospitals} from "../../actions/hospitalGyt";
+import {getHospitals} from "../../actions/gytHospitalList";
 
 import yiyuan from '../../images/医院.svg'
 import guahao from '../../images/挂号.svg'
@@ -9,13 +13,22 @@ import daozhen from '../../images/导诊.svg'
 
 import './indexIcon.less'
 
+@connect(() => ({
+}), (dispatch) => ({
+    // search (keyword, condition, pageNum, pageSize) {
+    //     dispatch(search(keyword, condition, pageNum, pageSize))
+    // },
+    getHospitals(page,condition) {
+        dispatch(getHospitals(page,condition))
+    }
+}))
 class IndexIcon extends Component {
   toIndexIconPage(target) {
     console.log("LLLLLLLLLL" + target)
     switch (target) {
       case GYT:
         console.log("1111"+target);
-        // this.props.getHospitals(1, '');
+        this.props.getHospitals(1, '');
         setTimeout(function () {
           Taro.navigateTo({ url: '/pages/hospital/hospitalGyt' });
         }, 100);

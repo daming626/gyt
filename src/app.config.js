@@ -8,6 +8,11 @@ export default {
     navigationBarTitleText: 'WeChat',
     navigationBarTextStyle: 'black'
   },
+  permission: {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于显示医院距离"
+    }
+  },
   config :{
     enablePullDownRefresh: true,
     backgroundTextStyle: "dark",
@@ -39,6 +44,12 @@ export default {
       "root": "pages/hospital/",
       "pages": [
         'hospitalGyt'
+      ]
+    },
+    {
+      "root": "pages/physicalIdentity/",
+      "pages": [
+        'healthKnowledge'
       ]
     }
   ]

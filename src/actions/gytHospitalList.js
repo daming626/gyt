@@ -18,6 +18,9 @@ export const getHospitals = (page,condition) => {
       // credentials: 'include',
       success: (res) => {
         console.log("我拿到数据了")
+        console.log(res)
+        console.log(res.data)
+        console.log(res.data.data)
         dispatch(setGytHospitalList(res.data.data));
       },
       fail: function (errMsg) {

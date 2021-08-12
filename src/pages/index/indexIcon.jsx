@@ -3,10 +3,9 @@ import { View, Text, Image } from '@tarojs/components'
 import { GYT, YYREGISTRATION, SMART, BASEURLIMG } from '../../constants/global'
 import Taro from '@tarojs/taro'
 
-// import { BASEURLIMG } from '../../constants/global'
-// import yiyuan from '../../images/医院.svg'
+import yiyuan from '../../images/医院.svg'
 import guahao from '../../images/挂号.svg'
-// import daozhen from '../../images/导诊.svg'
+import daozhen from '../../images/导诊.svg'
 
 import './indexIcon.less'
 
@@ -46,7 +45,8 @@ class IndexIcon extends Component {
     return (
       <View className='at-row  icon-content'>
         <View className='at-col-4 icon-item' onClick={this.toIndexIconPage.bind(this, GYT)}>
-          <Image className='icons-img' src={`${BASEURLIMG}医院.svg`} />
+          {/* <Image className='icons-img' src={`${BASEURLIMG}医院.svg`} /> */}
+          <Image className='icons-img' src={yiyuan} />
           <Text className='icon-title'>国医堂</Text>
         </View>
         <View className='at-col-4 icon-item' onClick={this.toIndexIconPage.bind(this, YYREGISTRATION)}>
@@ -55,7 +55,8 @@ class IndexIcon extends Component {
           <Text className='icon-title'>预约挂号</Text>
         </View>
         <View className='at-col-4 icon-item' onClick={this.toIndexIconPage.bind(this, SMART)}>
-          <Image className='icons-img' src={`${BASEURLIMG}导诊.svg`} />
+          {/* <Image className='icons-img' src={`${BASEURLIMG}导诊.svg`} /> */}
+          <Image className='icons-img' src={daozhen} />
           <Text className='icon-title'>智能导诊</Text>
         </View>
       </View>

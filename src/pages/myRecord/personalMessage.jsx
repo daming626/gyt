@@ -1,6 +1,6 @@
 import { Component } from 'react'
 import { View, Text, Picker } from '@tarojs/components'
-import TabBar from '../commen/tabBar'
+import TabBar from '../common/tabBar'
 import { AtAvatar, AtButton, AtInput, AtList, AtListItem } from 'taro-ui'
 
 import './personalMessage.less'

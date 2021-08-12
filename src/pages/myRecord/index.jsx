@@ -3,7 +3,7 @@ import Taro, { reLaunch } from "@tarojs/taro"
 import { View, Text, Image } from '@tarojs/components'
 import { AtAvatar, AtIcon } from 'taro-ui';
 import './index.less'
-import TabBar from '../commen/tabBar';
+import TabBar from '../common/tabBar';
 
 import registered from '../../images/registered.svg'
 import patient from '../../images/patient.svg'

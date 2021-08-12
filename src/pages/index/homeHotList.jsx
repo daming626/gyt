@@ -4,7 +4,7 @@ import Taro from '@tarojs/taro'
 import { View, ScrollView,Image,RichText} from '@tarojs/components'
 import { APIBASEURL, NOIMAGEURL } from "../../constants/global";
 
-import '../commen/hotItem.less';
+import '../common/hotItem.less';
 import './homeHotList.less'
 
 class HomeHotList extends Component {

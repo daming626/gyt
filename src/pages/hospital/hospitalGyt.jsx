@@ -4,7 +4,7 @@ import {BASEURLIMG,APIBASEURL} from '../../constants/global'
 import Taro from '@tarojs/taro'
 import HotHospital from './hotHospital'
 import HospitalList from './hospitalList'
-import TabBar from '../commen/tabBar'
+import TabBar from '../common/tabBar'
 
 import './hospitalGyt.less'
 

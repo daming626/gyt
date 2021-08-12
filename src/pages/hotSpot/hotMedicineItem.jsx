@@ -1,5 +1,0 @@
-
-
-
-class HotMedicineItem extends Component {
-}

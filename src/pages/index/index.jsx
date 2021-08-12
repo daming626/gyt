@@ -44,7 +44,7 @@ class Index extends Component {
         <IndexIcon/>
         <HomeMidCon/>
         <HomeHotList/>
-        <TabBar/>
+        <TabBar tabBarCurrent={0}/>
       </View>
     )
   }

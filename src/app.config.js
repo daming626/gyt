@@ -45,6 +45,12 @@ export default {
       "pages": [
         'hospitalGyt'
       ]
+    },
+    {
+      "root": "pages/physicalIdentity/",
+      "pages": [
+        'healthKnowledge'
+      ]
     }
   ]
 }

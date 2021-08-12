@@ -22,19 +22,34 @@ class Index extends Component {
     super();
   }
 
-  componentDidMount() {
-    //在本地获取用户itemcode
+  componentDidMount(){
+    Taro.getStorage({
+      key: 'openid',
+      success:(res)=> {
+        this.setState({
+          openid:'ojPDl5MvtN7rWhLHwAzDUcs0CdyQ'
+        })
+      }
+    })
   }
 
 
-
-
-  toPage(){
-    console.log('1234567')
+  toPersonalMessage(){
     Taro.navigateTo({url:`personalMessage`})
   }
 
+  toHealthData(){
+    Taro.navigateTo({url:`healthData`})
+  }
 
+  toRecord(){
+    Taro.navigateTo({url:`record`})
+  }
+
+  toPatientManagement(){
+    Taro.navigateTo({url:`patientManagement/index`})
+
+  }
   render() {
     return (
       <View className='at-row index'>
@@ -53,7 +68,7 @@ class Index extends Component {
             </View>
             {/* 右侧按钮 */}
             <View className='at-col at-col-3 rightIcon'>
-              <AtIcon onClick={this.toPage} value='chevron-right' color='#FFF'></AtIcon>
+              <AtIcon onClick={this.toPersonalMessage} value='chevron-right' color='#FFF'></AtIcon>
             </View>
           </View>
         </View>
@@ -63,7 +78,7 @@ class Index extends Component {
             <Image className='headBar-img' src={registered}></Image>
             <Text className='headBar-text'>我的挂号</Text>
           </View>
-          <View className='at-col  headBarBox'>
+          <View className='at-col  headBarBox' onClick={this.toPatientManagement}>
             <Image className='headBar-img' src={patient}></Image>
             <Text className='headBar-text'>就诊人管理</Text>
           </View>
@@ -75,15 +90,15 @@ class Index extends Component {
               <Text>健康数据</Text>
             </View>
             <View className='at-row items_box'>
-              <View className='at-col  middle_items'>
+              <View className='at-col  middle_items' onClick={this.toHealthData}>
                 <Image className='middle-img' src={health}></Image>
                 <View><Text className='middle-text'>健康档案</Text></View>
               </View>
-              <View className='at-col  middle_items'>
+              <View className='at-col  middle_items' onClick={this.toRecord}>
                 <Image className='middle-img' src={record}></Image>
                 <View><Text className='middle-text'>电子病历</Text></View>
               </View>
-              <View className='at-col  middle_items'>
+              <View className='at-col  middle_items' onClick={this.toRecord}>
                 <Image className='middle-img' src={cost}></Image>
                 <View><Text className='middle-text'>就诊费用</Text></View>
               </View>
@@ -126,7 +141,7 @@ class Index extends Component {
             </View>
           </View>
         </View>
-        <TabBar></TabBar>
+        <TabBar tabBarCurrent={3}/>
       </View>
     )
   }

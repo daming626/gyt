@@ -18,11 +18,11 @@ export default {
       "root": "pages/myRecord/",
       "pages": [
         'index',
-        'personalMessage'
-        // 'myRegistered',
-        // 'patientManagement',
-        // 'healthData',
-        // 'record',
+        'personalMessage',
+        //'myRegistered',
+        'patientManagement/index',
+        'healthData',
+        'record'
         // 'cost',
         // 'myCollection',
         // 'evaluation',

@@ -47,7 +47,7 @@ class Index extends Component {
   }
 
   toPatientManagement(){
-    Taro.navigateTo({url:`patientManagement/index`})
+    Taro.navigateTo({url:`patientManagement`})
 
   }
   render() {

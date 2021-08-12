@@ -15,7 +15,7 @@ export default {
         'index',
         'personalMessage',
         // 'myRegistered',
-        'patientManagement/index',
+        'patientManagement',
         'healthData',
         'record'
         // 'cost',

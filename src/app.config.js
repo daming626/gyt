@@ -8,6 +8,11 @@ export default {
     navigationBarTitleText: 'WeChat',
     navigationBarTextStyle: 'black'
   },
+  config :{
+    enablePullDownRefresh: true,
+    backgroundTextStyle: "dark",
+    onReachBottomDistance: 50
+  },
   subPackages:[
     {
       "root": "pages/myRecord/",
@@ -27,8 +32,13 @@ export default {
     {
       "root": "pages/hotSpot/",
       "pages": [
-        "hotSpotIndex",
-        "hotSpotMedicineDetail",
+        'hotSpotIndex'
+      ]
+    },
+    {
+      "root": "pages/hospital/",
+      "pages": [
+        'hospitalGyt'
       ]
     }
   ]

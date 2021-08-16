@@ -72,4 +72,4 @@ class HealthKnowledge extends Component {
   }
 }
 
-export default HealthKnowledge;
+export default HealthKnowledge

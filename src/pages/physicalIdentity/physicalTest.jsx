@@ -455,4 +455,4 @@ class PhysicalTest extends Component {
   }
 }
 
-export default PhysicalTest;
+export default PhysicalTest

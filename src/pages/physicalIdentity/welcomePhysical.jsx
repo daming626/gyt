@@ -141,4 +141,4 @@ class WelcomPhysical extends Component {
   }
 }
 
-export default WelcomPhysical;
+export default WelcomPhysical

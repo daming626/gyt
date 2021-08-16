@@ -60,4 +60,4 @@ class ToggleButton extends Component {
   }
 }
 
-export default ToggleButton;
+export default ToggleButton

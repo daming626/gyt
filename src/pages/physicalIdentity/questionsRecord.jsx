@@ -121,4 +121,4 @@ class QuestionsRecord extends Component {
   }
 }
 
-export default QuestionsRecord;
+export default QuestionsRecord

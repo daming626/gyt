@@ -49,7 +49,9 @@ export default {
     {
       "root": "pages/physicalIdentity/",
       "pages": [
-        'healthKnowledge'
+        'healthKnowledge',
+        'welcomePhysical',
+        'physicalTest'
       ]
     }
   ]
